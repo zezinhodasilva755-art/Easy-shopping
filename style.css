@@ -17,7 +17,7 @@ body {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -36,20 +36,23 @@ body {
     background-color: rgba(93, 93, 125, 0.16);
     min-height: 100vh;
     padding: 24px 0 0 57px;
+    margin-left: auto;
 }
 
 img {
     display: block;
     max-width: 100%;
     width: min(100%, 620px);
-    margin: 90px 0 0 clamp(-180px, -8vw, -40px);
+    margin: 93px 0 16px clamp(-259px, -14vw, -60px);
 }
 
 h1 {
     font-size: clamp(42px, 5vw, 70px);
     line-height: 1.1;
-    width: min(100%, 480px);
+    width: 100%;
+    max-width: 480px;
     margin-bottom: 18px;
+    white-space: normal;
 }
 
 p {
@@ -57,7 +60,9 @@ p {
     font-size: clamp(20px, 2vw, 28px);
     line-height: 1.6;
     margin: 15px 0;
-    width: min(100%, 540px);
+    width: 100%;
+    max-width: 540px;
+    white-space: normal;
 }
 
 button {
@@ -144,45 +149,53 @@ header {
     .wrapper {
         display: flex;
         flex-direction: row;
-        min-height: 100vh;
+        width: 100%;
+        max-width: 100%;
     }
 
     .contener-left,
     .contener-rigth {
-        flex: 1 1 50%;
         width: 50%;
         min-height: 100vh;
+        margin: 0;
+        padding: 20px 12px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .contener-left {
-        padding: 20px 12px;
+        flex: 1 1 50%;
         text-align: left;
         align-items: flex-start;
     }
 
     .contener-rigth {
-        padding: 20px 12px;
+        flex: 1 1 50%;
         background-color: rgba(93, 93, 125, 0.16);
+        position: static;
     }
 
     h1 {
-        font-size: clamp(22px, 4.2vw, 34px);
+        font-size: clamp(24px, 5vw, 34px);
         line-height: 1.2;
-        width: 100%;
+        width: auto;
         max-width: 100%;
         margin: 0 0 12px;
+        text-align: left;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
 
     p {
-        width: 100%;
+        width: auto;
         max-width: 100%;
+        margin: 0 0 18px;
         text-align: left;
         font-size: clamp(15px, 2.5vw, 20px);
         line-height: 1.5;
-        margin: 0 0 18px;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
 
     button {
@@ -202,6 +215,7 @@ header {
         width: 100%;
         max-width: 100%;
         margin: 0;
+        position: static;
         object-fit: contain;
     }
 }
@@ -213,9 +227,9 @@ header {
 
     .contener-left,
     .contener-rigth {
-        flex: 1 1 50%;
         width: 100%;
         min-height: 50vh;
+        flex: 1 1 50%;
     }
 
     .contener-left {
@@ -229,15 +243,23 @@ header {
     }
 
     h1 {
+        text-align: center;
         font-size: 30px;
         line-height: 40px;
-        text-align: center;
+        width: auto;
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
 
     p {
+        text-align: center;
         font-size: 18px;
         line-height: 26px;
-        text-align: center;
+        width: auto;
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
 
     button {
